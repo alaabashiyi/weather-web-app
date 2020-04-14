@@ -1,0 +1,58 @@
+.sky {
+  width: 100%;
+  height: 370px;
+  background-color: #04a9eb;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+}
+
+.weather-icon {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 40px;
+  z-index: 1;
+}
+
+.status {
+  margin: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  /* justify-items: ; */
+  justify-content: space-between;
+  width: 100px;
+  height: 100%;
+  color: #fff;
+}
+
+.temperature-div {
+  text-align: right;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.status-div {
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+@media all and (max-width: 500px) {
+  .sky {
+    height: 320px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .sky {
+    height: 250px;
+  }
+
+  .weather-icon {
+    width: 200px;
+    height: 200px;
+  }
+}

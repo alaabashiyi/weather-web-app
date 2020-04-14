@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sky.css" />
+    <title>Weather App!</title>
+  </head>
+  <body>
+    <nav>
+      <label>Search your city</label>
+      <input
+        type="text"
+        class="search"
+        id="search"
+        placeholder="  Enter city"
+      />
+      <button class="search_btn">Search</button>
+    </nav>
+    <div class="container">
+      <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+      <div class="sky" id="sky">
+        <div class="status">
+          <div class="temperature-div">
+            <span class="temperature" data-type="current">9</span>°C
+          </div>
+          <div class="status-div">
+            <span class="weather_descriptions" data-type="current"
+              >Sunny Day</span
+            >
+          </div>
+        </div>
+        <img
+          src="../weather-app/icons/113.png"
+          alt="weather-icon"
+          class="weather-icon"
+        />
+      </div>
+      <div class="location">
+        <ul>
+          <li><span class="name" data-type="location">London</span></li>
+          <li>
+            <span class="country" data-type="location">United Kingdom</span>
+          </li>
+          <li>
+            <span class="region" data-type="location"
+              >City of London, Greater London</span
+            >
+          </li>
+          <li>
+            <span class="localtime" data-type="location">2020-04-13 05:53</span>
+          </li>
+        </ul>
+      </div>
+      <div class="info">
+        <div class="info-1">
+          <ul>
+            <li>
+              Temperature:
+              <span class="temperature" data-type="current">9</span>°C
+            </li>
+            <li>
+              Feels like:
+              <span class="feelslike" data-type="current">9</span>°C
+            </li>
+            <li>
+              Humidity: <span class="humidity" data-type="current">76</span>%
+            </li>
+            <li>
+              Visibility:
+              <span class="visibility" data-type="current">10</span> KM
+            </li>
+            <li><span class="is_day" data-type="current">Night</span></li>
+          </ul>
+        </div>
+        <div class="info-2">
+          <ul>
+            <li>
+              Wind diriction:
+              <span class="wind_dir" data-type="current">NE</span>
+            </li>
+            <li>
+              Wind Speed:
+              <span class="wind_speed" data-type="current">22</span> KM/H
+            </li>
+            <li>
+              Wing degree:
+              <span class="wind_degree" data-type="current">50</span>
+            </li>
+            <li>
+              Pressure:
+              <span class="pressure" data-type="current">1021</span> mBar
+            </li>
+            <li>
+              Clouds Cover:
+              <span class="cloudcover" data-type="current">100</span>%
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -31,28 +31,41 @@ function setLocationInfo() {
 // changes the sky look according to the weather status
 function skyChanges() {
   if (globalData.current["is_day"] == "no") {
-    document.querySelector(".sky").style.backgroundColor = "#8352FC";
+    document.querySelector(".sky").style.background = "var(--night-sky)";
+
     document.querySelector(
       ".weather-icon"
-    ).src = `../weather-app/icons/${globalData.current.weather_code}-night.png`;
+    ).src = `./icons/${globalData.current.weather_code}-night.png`;
     document.querySelector(".is_day").innerText = "Night";
   } else if (globalData.current["is_day"] == "yes") {
-    document.querySelector(".sky").style.backgroundColor = "#04A9EB";
+    document.querySelector(".sky").style.background = "var(--day-sky)";
+
     document.querySelector(
       ".weather-icon"
-    ).src = `../weather-app/icons/${globalData.current.weather_code}.png`;
+    ).src = `../icons/${globalData.current.weather_code}.png`;
     document.querySelector(".is_day").innerText = "Day";
   }
 }
 
-// search event listener
-searchBtn.addEventListener("click", () => {
+// Shortcut for event listeners
+function startSearch() {
   getData(searchText.value);
   searchText.value = "";
   document.querySelector("body").classList.remove("show-nav");
+}
+
+// search event listener
+searchBtn.addEventListener("click", startSearch);
+
+document.querySelector("#search").addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    startSearch();
+  }
 });
 
 // menu event listener
 document.querySelector("#toggle").addEventListener("click", (e) => {
   document.querySelector("body").classList.toggle("show-nav");
 });
+
+getData("Rio");
